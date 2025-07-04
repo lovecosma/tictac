@@ -1,0 +1,5 @@
+/ - if @game.in_progress?
+/   = render Games::InProgressComponent.new(game: @game)
+/ - elsif @game.finished?
+/   = render Games::FinishedComponent.new(game: @game)
+

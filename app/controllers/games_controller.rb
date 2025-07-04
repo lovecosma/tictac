@@ -1,9 +1,24 @@
 class GamesController < ApplicationController
+
+  def show
+    @game = Game.find(params[:id])
+  end
+
   def new
-    @player_one = Player.new(token: 'X')
-    @player_two = Player.new(token: 'O')
-    players = [@player_one, @player_two]
-    @board = Board.new(players:)
-    @game = Game.new(board:)
+    @game = Game.new
+    redirect_to game_path @game
+  end
+
+  def update
+    @game = Game.find(params[:id])
+    @game.take_turn(game_params[:move])
+    redirect_to game_path @game
+  end
+
+  private
+
+  def game_params
+    params.require(:game).permit(:move)
   end
 end
+

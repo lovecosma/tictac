@@ -71,3 +71,11 @@ gem "dry-initializer", "~> 3.2"
 gem "view_component", "~> 3.23"
 
 gem "slim-rails", "~> 3.7"
+
+gem "aasm", "~> 5.5"
+
+gem "after_commit_everywhere", "~> 1.6"
+
+group :development, :test do
+  gem 'rspec-rails', '~> 8.0.0'
+end
