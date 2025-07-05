@@ -21,12 +21,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_02_224037) do
   end
 
   create_table "games", force: :cascade do |t|
+    t.string "board", default: [nil, nil, nil, nil, nil, nil, nil, nil, nil], array: true
     t.string "state", default: "new", null: false
-    t.bigint "board_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["board_id"], name: "index_games_on_board_id"
   end
-
-  add_foreign_key "games", "boards"
 end
