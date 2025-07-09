@@ -1,6 +1,6 @@
 - if @game.new?
   h2 = 'New Game'
 - elsif @game.in_progress?
-  = render Games::InProgressComponent.new(game: @game)
+  = render Games::BoardComponent.new(game: @game)
 - elsif @game.finished?
   h2 = 'Game Finished'

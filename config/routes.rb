@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :games do
-    post '/boards', to: 'boards#update', as: :update_board
+    get '/board', to: 'boards#show', as: :board
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -2,6 +2,8 @@ class Game < ApplicationRecord
   include AASM
   PLAYERS = %w(X O)
 
+  attr_accessor :current_player
+
   WINNING_COMBINATIONS = [
     [0, 1, 2],
     [3, 4, 5],
@@ -30,22 +32,18 @@ class Game < ApplicationRecord
     end
   end
 
-  def take_turn(play_args)
-    play(**play_args)
+  def take_turn(index:, current_player:)
+    @current_player = current_player
+    play(index)
     if won?
       finish!
     elsif draw?
       draw!
     end
-    next_player!
   end
 
-  def next_player!
+  def next_player
     @current_player = @current_player == 'X' ? 'O' : 'X'
-  end
-
-  def current_player
-    @current_player ||= PLAYERS.first
   end
 
   def won?
@@ -67,9 +65,12 @@ class Game < ApplicationRecord
     board.all? { |cell| cell.present? }
   end
 
-  def play(value:, index:)
-    raise 'Invalid move' unless board[index].blank? && index >= 0 && index <= 8
-    board[index] = value
+  def play(index)
+    board[index] = current_player
     save
+  end
+
+  def current_player
+    @current_player ||= PLAYERS.first
   end
 end

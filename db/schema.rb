@@ -21,7 +21,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_02_224037) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.string "board", default: [nil, nil, nil, nil, nil, nil, nil, nil, nil], array: true
+    t.string "board", default: ["", "", "", "", "", "", "", "", ""], array: true
     t.string "state", default: "new", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

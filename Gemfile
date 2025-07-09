@@ -54,7 +54,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'pry'
 
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
@@ -82,4 +81,9 @@ gem "after_commit_everywhere", "~> 1.6"
 
 group :development, :test do
   gem 'rspec-rails', '~> 8.0.0'
+end
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
 end
