@@ -113,17 +113,14 @@
     <orderEntry type="library" scope="PROVIDED" name="ruby-progressbar (v1.13.0, jruby-10.0.0.1-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.4.1, jruby-10.0.0.1-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="securerandom (v0.4.1, jruby-10.0.0.1-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.33.0, jruby-10.0.0.1-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="slim (v5.2.1, jruby-10.0.0.1-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="slim-rails (v3.7.0, jruby-10.0.0.1-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="solid_cache (v1.0.7, jruby-10.0.0.1-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="solid_queue (v1.1.5, jruby-10.0.0.1-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sshkit (v1.24.0, jruby-10.0.0.1-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="stimulus-rails (v1.3.4, jruby-10.0.0.1-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="tailwindcss-rails (v4.2.3, jruby-10.0.0.1-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="temple (v0.10.3, jruby-10.0.0.1-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v1.3.2, jruby-10.0.0.1-p0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="tilt (v2.6.0, jruby-10.0.0.1-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="timeout (v0.4.3, jruby-10.0.0.1-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbo-rails (v2.0.16, jruby-10.0.0.1-p0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v2.0.6, jruby-10.0.0.1-p0) [gem]" level="application" />
