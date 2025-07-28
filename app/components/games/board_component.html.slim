@@ -1,4 +1,0 @@
-= turbo_frame_tag 'tic-tac-toe-board' do
-    .grid.grid-cols-3.gap-4 data-controller="games"
-        - board.each.with_index do |value, index|
-            = render Boards::CellComponent.new(game: @game, value:, index:)

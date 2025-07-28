@@ -1,5 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
+
 export default class extends Controller {
+ static targets = ['cell']
 
   connect() {
     this.board = ['', '', '', '', '', '', '', '', ''];
@@ -19,11 +21,12 @@ export default class extends Controller {
   play(e){
       if(e.target.innerText === ''){
       e.target.innerText = this.currentPlayer;
-      const index = parseInt(e.target.dataset.index)
+      const index = parseInt(e.target.dataset.index);
       this.board[index] = this.currentPlayer;
       this.winner = this.checkWinner();
         if(this.winner){
-            alert(`Player ${this.winner} wins!`);
+            // this.celebrate()
+            // alert(`Player ${this.winner} wins!`);
         } else if(this.draw()){
             alert('It\'s a draw!');
         } else {
@@ -33,23 +36,35 @@ export default class extends Controller {
     }
   }
 
+    // celebrate() {
+    //  const jsConfetti = new JSConfetti()
+    //  jsConfetti.addConfetti()
+    // }
+
     checkWinner() {
-        const winner = this.winningCombos.find(combo =>
+        const winningCombo = this.winningCombos.find(combo =>
             combo.every(index => this.board[index] === 'X') ||
             combo.every(index => this.board[index] === 'O')
         );
 
-        if (winner) {
-            return this.board[winner[0]];
+        if (winningCombo) {
+            this.showWinner(winningCombo);
+            return this.board[winningCombo[0]];
         }
         return null;
     }
 
-  nextTurn(){
+    showWinner(combo) {
+        combo.forEach(index => {
+            this.cellTargets[index].style.backgroundColor = 'rgb(187, 247, 208)';
+        })
+    }
+
+   nextTurn(){
     this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X';
   }
 
-  draw(){
+   draw(){
     return this.board.every(cell => cell !== '');
   }
 }

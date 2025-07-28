@@ -1,14 +1,8 @@
 class GamesController < ApplicationController
-  def show
-    @game = Game.find(params[:id])
-    @game.start! if @game.new?
-  end
-
-  def new
-    @game = Game.new
-    session[:game_id] = @game.id
-    @game.start!
-    redirect_to game_path @game
-  end
+	X = 'X'.freeze
+	O = 'O'.freeze
+	def new
+		@board = Board.create
+		session[:current_player] = X
+	end
 end
-
