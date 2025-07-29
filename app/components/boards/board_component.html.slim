@@ -1,5 +1,5 @@
 .lg:w-96.md:w-96.w-64.p-1
-  .grid.grid-cols-3.lg:gap-4.md:gap-4.gap-2 data-controller="games"
-    - board.cells.each.with_index do |c, index|
+  .grid.grid-cols-3.lg:gap-4.md:gap-4.gap-2
+    - board.cells.each.with_index do |value, index|
       .lg:w-30.lg:h-30.md:w-30.md:h-30.w-20.h-20.bg-slate-200.text-6xl.text-black.flex.justify-center.items-center data-games-target='cell' data-action='click->games#play' data-index=index
-        = c
+        = value

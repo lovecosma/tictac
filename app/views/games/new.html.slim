@@ -1,2 +1,8 @@
-.w-full.flex.justify-center.mt-28
-  = render 'boards/board', board: @board
+.w-full data-controller="games"
+  .flex.justify-center.mt-28
+    = render 'boards/board', board: @board
+  .flex.justify-center.mt-4.items-center
+    .text-lg data-games-target="status"
+    = link_to 'New Game', new_game_path,
+              class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold p-1 ml-3 rounded',
+              data: { games_target: 'new' }
