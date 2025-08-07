@@ -71,7 +71,7 @@ gem "tailwindcss-rails", "~> 4.2"
 
 gem "dry-initializer", "~> 3.2"
 
-gem "view_component", "~> 3.23"
+gem "view_component", "~> 4.0"
 
 gem "slim-rails", "~> 3.7"
 
